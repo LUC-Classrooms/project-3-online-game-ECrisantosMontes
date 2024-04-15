@@ -5,7 +5,7 @@
  * 
  * Use this template to get started creating a simple 2D game for the web using P5.js. 
  */
-var gameState = "splash;"
+var gameState = "splash";
 
 function setup() {
 
