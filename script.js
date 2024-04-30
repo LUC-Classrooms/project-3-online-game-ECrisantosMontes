@@ -21,6 +21,7 @@ function setup() {
   timer = new Timer(5000); //5 seconds
   console.log(timer);
   dropTimer = new Timer(1000);// 1 second
+  testBox = new Box(width/2, height/3);
 }
 
 function draw() {
@@ -52,6 +53,8 @@ function splash() {
   text("Let's Play a Game!", width / 2, height / 2);
   textSize(12);
   text("(click the mouse to continue)", width / 2, height / 2 + 30);
+  testBox.display();
+  testBox.spin();
 }
 
 function play() {
