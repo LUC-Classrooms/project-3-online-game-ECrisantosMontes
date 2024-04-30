@@ -15,7 +15,7 @@ function setup() {
   player1 = new Player(width/2, height * 7/8);
   console.log(player1);
 
-  timer = new Timer(30000);
+  timer = new Timer(5000);
   console.log(timer);
 }
 
