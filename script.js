@@ -77,6 +77,7 @@ function mousePressed() {
   console.log("click!");
   if(gameState == "splash") {
     gameState = "play";
+    timer.start();
   } else if(gameState == "play") {
     gameState = "gameOver";
   } else if(gameState == "gameOver") {
