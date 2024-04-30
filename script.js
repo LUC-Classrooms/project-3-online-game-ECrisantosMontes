@@ -79,7 +79,7 @@ function mousePressed() {
     gameState = "play";
     timer.start();
   } else if(gameState == "play") {
-    gameState = "gameOver";
+    // gameState = "gameOver";
   } else if(gameState == "gameOver") {
     gameState = "splash";
   }
