@@ -75,11 +75,11 @@ function gameOver() {
 function mousePressed() {
 
   console.log("click!");
-  if(gameState == "splash"){
+  if(gameState == "splash") {
     gameState = "play";
-  } else if(gameState == "play"){
+  } else if(gameState == "play") {
     gameState = "gameOver";
-  } else if(gameState == "gameOver"){
+  } else if(gameState == "gameOver") {
     gameState = "splash";
   }
   console.log(gameState);
