@@ -15,7 +15,7 @@ function setup() {
   player1 = new Player(width/2, height * 7/8);
   console.log(player1);
 
-  timer = new Timer(5000);
+  timer = new Timer(30000);
   console.log(timer);
 }
 
@@ -64,6 +64,10 @@ function play() {
   if (timer.isFinished()) {
      gameState = "gameOver"
     }
+
+    textAlign(LEFT);
+text("elapsed time: " + timer.elapsedTime, 40, 100);
+// show elapsed time in top left corner
 
 }
 
