@@ -66,7 +66,7 @@ function play() {
     }
 
     textAlign(LEFT);
-text("elapsed time: " + timer.elapsedTime, 40, 100);
+text("elapsed time: " + timer.elapsedTime, 10, 20);
 // show elapsed time in top left corner
 
 }
