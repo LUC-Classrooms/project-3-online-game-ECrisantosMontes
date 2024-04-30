@@ -18,7 +18,7 @@ function setup() {
   player1 = new Player(width/2, height * 7/8);
   console.log(player1);
 
-  timer = new Timer(5000); //5 seconds
+  timer = new Timer(30000); //5 seconds
   console.log(timer);
   dropTimer = new Timer(1000);// 1 second
   testBox = new Box(width/2, height/3);
@@ -72,6 +72,28 @@ function play() {
      gameState = "gameOver"
     }
 
+  if(dropTimer.isFinished()){
+    let p = new Box(random(width), -40);  // new box, anywhere across the width of the canvas, but 40px above the canvas
+    presents.push(p); // add object 'p' to the 'presents' Array
+    dropTimer.start(); // restart timer for next drop
+    }
+
+    for(let i = 0; i < presents.length; i++) { 
+        // for each element of the array, represented by 'i', do the following:
+        presents[i].display(); // draw it on the canvas
+        presents[i].move(); // make it drop
+        presents[i].spin() // make it rotate
+
+      if(presents[i].y > height) { // present went below the canvas
+       presents.splice(i, 1); // remove 1 element from from "presents" at index 'i'
+     }
+    
+     let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
+     if(d < 50){
+      presents.splice(i, 1);
+     }
+    }//end of for() loop
+
     textAlign(LEFT);
 text("elapsed time: " + timer.elapsedTime, 10, 20);
 // show elapsed time in top left corner
@@ -93,6 +115,7 @@ function mousePressed() {
   if(gameState == "splash") {
     gameState = "play";
     timer.start();
+    dropTimer.start();
   } else if(gameState == "play") {
     // gameState = "gameOver";
   } else if(gameState == "gameOver") {
