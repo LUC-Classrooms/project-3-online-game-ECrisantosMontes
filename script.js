@@ -7,7 +7,7 @@
  */
 var gameState = "splash";
 var player1;
-var gameTimer;
+var timer;
 var testBox; // a box to preview on the splash screen
 var dropTimer; // regulate box drops
 var presents = new Array(0); // an empty array called "presents"
