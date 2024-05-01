@@ -4,7 +4,7 @@ function Box(_x, _y){
 
   this.xSpeed = 0;
   this.ySpeed = random(3, 7); // 1 - 2 (falling)
-  this.rSpeed = random(-.02, .02); // rotation speed
+  this.rSpeed = random(.01, .06); // rotation speed
 
   this.angle = 0;
 
