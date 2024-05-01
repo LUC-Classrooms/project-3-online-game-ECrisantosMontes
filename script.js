@@ -60,8 +60,8 @@ function splash() {
 
 function play() {
   // this is what you see when the game is running 
-  background(0, 200, 0);
-  fill(0, 0, 200)
+  background(0, 0, 0, 250);
+  fill(200, 0, 200)///Fuschsia 
   textAlign(CENTER);
   textSize(16);
   text("This is where the Game happens", width / 2, height / 2);
