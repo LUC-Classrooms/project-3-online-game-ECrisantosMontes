@@ -92,12 +92,14 @@ function play() {
      let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
      if(d < 50){
       presents.splice(i, 1);
+      score ++; // add 1 point
      }
     }//end of for() loop
 
-    textAlign(LEFT);
+textAlign(LEFT);
 text("elapsed time: " + timer.elapsedTime, 10, 20);
 // show elapsed time in top left corner
+text("Score: " + score, 20, 40);
 
 }
 
