@@ -69,6 +69,7 @@ function play() {
   player1.x = mouseX;
   player1.y = mouseY
   player1.display();
+  player1.move()
 
   if (timer.isFinished()) {
      gameState = "gameOver"

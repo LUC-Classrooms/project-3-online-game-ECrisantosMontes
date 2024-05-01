@@ -17,28 +17,14 @@ function Player(tempX, tempY) {
      * The translate() function (above, line 10) takes care of moving it on the canvas.
      * 
     */
-    let r = this.diam / 2; // radius
-    // 270 degrees (top):
-    let x1 = cos(PI + HALF_PI) * r; 
-    let y1 = sin(PI + HALF_PI) * r; 
-    // 30 degrees (bottom right):
-    let x2 = cos(PI / 6) * r;
-    let y2 = sin(PI / 6) * r;
-    // 150 degrees (bottom left): 
-    let x3 = cos(PI * 5 / 6) * r;
-    let y3 = sin(PI * 5 / 6) * r;
-    //draw the triangle:
-    //triangle(x1, y1, x2, y2, x3, y3);
-    //or draw a complex polygon
-    beginShape();
-    vertex(x1, y1);
-    vertex(x2, y2);
-    vertex(x3, y3);
-    endShape();
-    // uncomment the next two lines to see the circle
-    noFill();
-    stroke(220, 100, 200);
-    ellipse(0, 0, this.diam, this.diam);
+    fill(255, 255, 60);// BASED OFF Of: https://p5js.org/reference/#/p5/arc///
+    let pacMouth = PI / 16;
+    let startAngle = pacMouth * sin(frameCount * .01) + pacMouth;
+    let endAngle = TWO_PI - startAngle;
+    arc(0, 0, 80, 80, startAngle, endAngle, PIE);
+
+
+  
 
     pop(); // dispose of this layer
 
