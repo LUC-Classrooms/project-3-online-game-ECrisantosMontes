@@ -8,19 +8,12 @@ function Box(_x, _y){
 
   this.angle = 0;
 
-  /* choose a color scheme at random */
-  if(random(100) > 50){
-    this.boxColor = color(random(100, 255), 0, 0);
-    this.ribbonColor = color(0, random(100, 255), 0);
-  } else {
-    this.boxColor = color(0, random(100, 255), 0);
-    this.ribbonColor = color(random(100, 255), 0, 0);
-  }
 
   this.display = function(){
 
     push();
     translate(this.x, this.y);// moves new layers origin point on canvas
+    rotate(this.angle);
     strokeWeight(2);
     stroke(0, 0, 0, 80);
     fill(200, 50, 100, 200);
