@@ -8,6 +8,7 @@
 var gameState = "splash";
 var player1;
 var timer;
+var testPac; // pac on gameOver screen
 var testBox; // a cherry on splash and game over screen
 var dropTimer; // regulate box drops
 var presents = new Array(0); // an empty array called "presents"
@@ -23,6 +24,8 @@ function setup() {
   console.log(timer);
   dropTimer = new Timer(1000);// 1 second
   testBox = new Box(width/2, height/3);
+  testPac = new Player(width/3, height/3);
+
 }
 
 function draw() {
@@ -118,6 +121,8 @@ function gameOver() {
   text("Your final score: " + score, width/2, height * 1.7/3);
   testBox.display();
   testBox.spin();
+  testPac.display();
+  //testPac.move();
 }
 
 function mousePressed() {
