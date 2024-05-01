@@ -36,8 +36,8 @@ function Player(tempX, tempY) {
     vertex(x3, y3);
     endShape();
     // uncomment the next two lines to see the circle
-    // noFill();
-    // ellipse(0, 0, this.diam, this.diam);
+    noFill();
+    ellipse(0, 0, this.diam, this.diam);
 
     pop(); // dispose of this layer
 
