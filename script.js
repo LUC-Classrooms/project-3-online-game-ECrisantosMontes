@@ -19,7 +19,7 @@ function setup() {
   player1 = new Player(width/2, height * 7/8);
   console.log(player1);
 
-  timer = new Timer(30000); //30 seconds
+  timer = new Timer(1000); //30 seconds
   console.log(timer);
   dropTimer = new Timer(1000);// 1 second
   testBox = new Box(width/2, height/3);
@@ -48,7 +48,8 @@ function draw() {
 
 function splash() {
   // this is what you would see when the game starts
-  background(220, 200, 240);
+  background(240, 200, 240);
+  fill(200, 100, 200);
   textAlign(CENTER);
   textSize(16);
   text("Let's Play a Game!", width / 2, height / 2);
@@ -61,7 +62,7 @@ function splash() {
 function play() {
   // this is what you see when the game is running 
   background(220, 200, 240);
-  fill(200, 0, 200)///Fuschsia 
+  fill(200, 100, 200)///-pastel-fuchsia?
   textAlign(CENTER);
   textSize(16);
   text("This is where the Game happens!", width / 2, height / 4.5);
@@ -98,7 +99,7 @@ function play() {
     }//end of for() loop
 
 textAlign(LEFT);
-text("elapsed time: " + timer.elapsedTime, 10, 20);
+text("Elapsed time: " + timer.elapsedTime, 10, 20);
 // show elapsed time in top left corner
 text("Score: " + score, 20, 40);
 
@@ -107,13 +108,15 @@ text("Score: " + score, 20, 40);
 function gameOver() {
   // this is what you see when the game ends
   background(0, 0, 0, 220);
-  fill(200, 50, 100);
+  fill(190, 90, 190);
   textAlign(CENTER);
   textSize(46);
   textFont('Shine Typewriter')
-  text("Game Over!", width / 2, height / 2);
-  text("Your final score: " + score, width/2, height * 2/3);
+  text("Game Over!", width / 2, height / 5.5);
+  textSize(36);
+  text("Your final score: " + score, width/2, height * 1.7/3);
   testBox.display();
+  testBox.spin();
 }
 
 function mousePressed() {
