@@ -8,7 +8,7 @@
 var gameState = "splash";
 var player1;
 var timer;
-var testBox; // a box to preview on the splash screen
+var testBox; // a cherry on splash and game over screen
 var dropTimer; // regulate box drops
 var presents = new Array(0); // an empty array called "presents"
 var score = 0; // keep track of points (starting at 0)
@@ -48,7 +48,7 @@ function draw() {
 
 function splash() {
   // this is what you would see when the game starts
-  background(200);
+  background(220, 200, 240);
   textAlign(CENTER);
   textSize(16);
   text("Let's Play a Game!", width / 2, height / 2);
@@ -60,11 +60,11 @@ function splash() {
 
 function play() {
   // this is what you see when the game is running 
-  background(0, 0, 0, 250);
+  background(220, 200, 240);
   fill(200, 0, 200)///Fuschsia 
   textAlign(CENTER);
   textSize(16);
-  text("This is where the Game happens", width / 2, height / 2);
+  text("This is where the Game happens!", width / 2, height / 4.5);
   player1.x = mouseX;
   player1.y = mouseY
   player1.display();
@@ -106,12 +106,14 @@ text("Score: " + score, 20, 40);
 
 function gameOver() {
   // this is what you see when the game ends
-  background(0);
-  fill(255, 0, 0)
+  background(0, 0, 0, 220);
+  fill(200, 50, 100);
   textAlign(CENTER);
-  textSize(16);
+  textSize(46);
+  textFont('Shine Typewriter')
   text("Game Over!", width / 2, height / 2);
   text("Your final score: " + score, width/2, height * 2/3);
+  testBox.display();
 }
 
 function mousePressed() {
