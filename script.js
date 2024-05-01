@@ -111,6 +111,7 @@ function gameOver() {
   textAlign(CENTER);
   textSize(16);
   text("Game Over!", width / 2, height / 2);
+  text("Your final score: " + score, width/2, height * 2/3);
 }
 
 function mousePressed() {
@@ -120,6 +121,7 @@ function mousePressed() {
     gameState = "play";
     timer.start();
     dropTimer.start();
+    score = 0; // reset score to 0 at start of game
   } else if(gameState == "play") {
     // gameState = "gameOver";
   } else if(gameState == "gameOver") {
