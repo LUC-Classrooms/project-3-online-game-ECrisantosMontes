@@ -17,9 +17,9 @@ function Player(tempX, tempY) {
      * The translate() function (above, line 10) takes care of moving it on the canvas.
      * 
     */
-    fill(255, 255, 60);// BASED OFF Of: https://p5js.org/reference/#/p5/arc///
+    fill(245, 245, 40, 290);// BASED OFF Of: https://p5js.org/reference/#/p5/arc///
     let pacMouth = PI / 16;
-    let startAngle = pacMouth * sin(frameCount * .01) + pacMouth;
+    let startAngle = pacMouth * sin(frameCount * .2) + pacMouth;
     let endAngle = TWO_PI - startAngle;
     arc(0, 0, 80, 80, startAngle, endAngle, PIE);
 
